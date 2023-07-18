@@ -1,9 +1,9 @@
 import type { RequestHandler } from '@sveltejs/kit';
 import { Configuration, OpenAIApi } from 'openai-edge';
-import { OPENAI_KEY, OPENAI_ORG_ID } from '$env/static/private';
+import { OPENAI_KEY } from '$env/static/private';
 import { OpenAIStream, StreamingTextResponse } from 'ai';
 
-const config = new Configuration({ apiKey: OPENAI_KEY, organization: OPENAI_ORG_ID });
+const config = new Configuration({ apiKey: OPENAI_KEY });
 const openai = new OpenAIApi(config);
 
 export const POST: RequestHandler = async ({ request }) => {
