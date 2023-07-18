@@ -2,7 +2,7 @@
     import { useChat } from "ai/svelte";
 
     const { messages, handleSubmit, input } = useChat({
-        api: "chat"});
+        api: "/chat"});
 </script>
 <header>Welcome to my chatbot!</header>
 
